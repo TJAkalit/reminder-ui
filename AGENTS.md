@@ -90,7 +90,13 @@ npm test               # vitest
 npm run lint           # oxlint
 npm run format         # prettier
 npm run build          # tsc -b && vite build → dist/
+
+docker build -t reminder-ui .                               # nginx со статикой
+docker run -p 8080:80 -e API_UPSTREAM=http://api:8000 reminder-ui
 ```
+
+`API_UPSTREAM` — адрес бэкенда без пути (`/api/...` передаётся как есть). Сервер — aarch64:
+для него собирать под `linux/arm64`.
 
 ## Состояние
 

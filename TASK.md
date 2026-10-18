@@ -36,9 +36,10 @@
 - [ ] Проверить на реальном телефоне в домашней сети (`npm run dev -- --host`)
 - [ ] Пересобрать типы после изменений API (`npm run gen:api`)
 
-## Отложено
+## Деплой
 
-- [ ] Dockerfile (multi-stage) + `nginx/default.conf` (SPA fallback, proxy `/api`, кэш)
+- [x] Dockerfile (node → nginx) + `nginx/default.conf.template` (SPA fallback, proxy `/api`, кэш, gzip)
+- [ ] Собрать под `linux/arm64` и опубликовать в ghcr.io
 
 ## Бэклог / идеи
 
